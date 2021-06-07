@@ -1,0 +1,32 @@
+netty:
+  #测试
+  host: 127.0.0.1
+  port: 16609
+  #生产
+  #host: 127.0.0.1
+  #port: 16619
+  leakDatection:
+    level: advanced
+spring:
+  #profiles:
+   # active: dev
+  config:
+    activate:
+      on-profile:
+      - dev
+  cloud:
+    config:
+      enabled: false
+      ##uri: http://localhost:5081
+      #profile: dev
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000
+    min-spare-threads: 20
+  port: 5089
+
+crc:
+  hourstime: 168  #crc校验持续写入redis 7天
+tenwave:
+  10s-hourstime: 24  #10stenwave 小时 持续写入redis
