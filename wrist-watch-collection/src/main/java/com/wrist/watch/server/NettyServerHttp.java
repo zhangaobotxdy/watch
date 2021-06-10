@@ -26,18 +26,18 @@ import java.util.concurrent.ConcurrentHashMap;
 public class NettyServerHttp
 {
 
-//    @Value("${netty.port}")
-//    private Integer port;
-    private Integer port = 16608;
+   @Value("${netty.httpport}")
+   private Integer port;
+   // private Integer port = 16608;
 
     @Value("${netty.host}")
     private String host;
 
-    @Value("${jks.path}")
+/*    @Value("${jks.path}")
     private String jksPath;
 
     @Value("${jks.password}")
-    private String jksPassword;
+    private String jksPassword;*/
 
     public static ConcurrentHashMap<String, Connection> connections = new ConcurrentHashMap<String, Connection>();
 
